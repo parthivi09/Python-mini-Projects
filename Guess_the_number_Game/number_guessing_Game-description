@@ -1,0 +1,71 @@
+🔢🔍 Guess the Number (Hint-Driven Edition)
+
+An interactive, mathematical deduction console game. In this game, the computer selects a secret number, and the player uses dynamic feedbacks (Too High / Too Low) to lock onto the correct number before they run out of attempts!
+
+✨ Features
+
+Multi-Difficulty Settings: Customize your gameplay experience:
+
+Easy: Range 1-50, 7 Attempts
+
+Medium: Range 1-100, 7 Attempts
+
+Hard: Range 1-200, 5 Attempts
+
+Input Integrity (Exception Handling): The game is crash-proof! If a user types text or symbols instead of numbers, Python's try-except handles it gracefully and prompts them to try again.
+
+Persistent High Scores: Tracks your best score (fewest attempts taken to solve) across multiple game rounds.
+
+Navigation Menus: Simple command-line interface with options to Play, View High Scores, or Quit.
+
+🛠️ How It Works (Code Architecture)
+
+This program introduces critical structural concepts:
+
+Robust Error Prevention (try-except blocks): Prevents crash errors when parsing user inputs into numbers using int().
+
+Dynamic Configuration: Uses a dedicated setup function get_difficulty_settings to deliver variable game parameters depending on the user's choice.
+
+State Management: Retains the high_score globally in memory outside the execution frame of individual rounds.
+
+Helper Functions: Segregates logic cleanly—evaluate_guess handles the comparison mathematics, while play_round orchestrates input loops.
+
+🎮 How to Play
+
+Make sure you have Python 3 installed.
+
+Navigate to this game directory in your terminal:
+
+cd guess_the_number
+
+
+Run the script:
+
+python guess_the_number.py
+
+
+Pick a choice from the main menu, choose your difficulty, and start deducing!
+
+📸 Sample Gameplay
+
+--- Main Menu ---
+1. Play Game
+2. View High Score
+3. Quit
+Select an option (1-3): 1
+
+Select Difficulty:
+1. Easy (1-50, 7 attempts)
+2. Medium (1-100, 7 attempts)
+3. Hard (1-200, 5 attempts)
+Choose difficulty (1-3): 2
+
+I've picked a number between 1 and 100. Can you guess it?
+You have 7 attempts. Good luck!
+Attempt 1/7 | Enter your guess (or 'q' to quit round): 50
+📈 Too High! Try a smaller number.
+Attempt 2/7 | Enter your guess (or 'q' to quit round): 25
+📉 Too Low! Try a larger number.
+Attempt 3/7 | Enter your guess (or 'q' to quit round): 37
+🎉 Correct! You guessed the number in 3 attempts!
+🌟 New Personal Best High Score established! 🌟

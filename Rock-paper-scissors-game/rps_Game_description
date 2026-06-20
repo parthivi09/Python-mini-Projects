@@ -1,0 +1,79 @@
+🪨✂️🧻 Rock-Paper-Scissors (Console Edition)
+
+A fully interactive, command-line interface (CLI) implementation of the classic hand game. This project features robust input validation, score tracking across multiple rounds, and a highly efficient evaluation algorithm.
+
+✨ Features
+
+Infinite Play Loop: Play as many rounds as you want! The game only stops when you decide to exit.
+
+Intelligent Score Tracking: Tracks your wins and the computer's wins throughout the entire session.
+
+Smart Round Evaluation: Uses an optimized mathematical formula to determine the winner instantly with minimal conditional statements.
+
+Input Protection: Handles invalid user inputs gracefully without crashing the game.
+
+Session Summary: Displays a final scoreboard and declares an overall match winner when you exit.
+
+🛠️ How It Works (Code Architecture)
+
+This program showcases several fundamental and intermediate Python concepts:
+
+The Game Loop (while True): Keeps the game running dynamically and checks for the exit command ('q').
+
+State Management: Keeps track of the user and computer scores using variables defined outside the loop so they do not reset on each round.
+
+Data Mapping (Dictionaries):
+
+Maps input shortcuts (r, p, s) to numbers (1, 2, 3) to simplify logical processing.
+
+Reverse-maps numbers back to text ("Rock", "Paper", "Scissors") for user-friendly display messages.
+
+Optimized Math Logic: Instead of using numerous nested if-else blocks, the winner is determined using a smart subtraction pattern:
+
+Draw: computer == user
+
+User Wins: computer - user equals -1 or 2
+
+Computer Wins: computer - user equals 1 or -2
+
+🎮 How to Play
+
+Make sure you have Python 3 installed.
+
+Navigate to this directory in your terminal:
+
+cd rock_paper_scissors
+
+
+Run the script:
+
+python rock_paper_scissors.py
+
+
+Enter your choices when prompted:
+
+r for Rock
+
+p for Paper
+
+s for Scissors
+
+q to Quit the game and see final results.
+
+📸 Sample Gameplay
+
+~~~~~Welcome to Rock-Paper-Scissors!~~~~~
+
+Enter your choice ('r' for rock, 'p' for paper, 's' for scissor, 'q' to quit): r
+You entered: Rock
+Computer entered: Scissors
+You won this round!
+
+Current Score -> YOU: 1 | COMPUTER: 0
+-----------------------------------------
+Enter your choice ('r' for rock, 'p' for paper, 's' for scissor, 'q' to quit): q
+
+FINAL SCORE
+YOU: 1 | COMPUTER: 0
+You won the match!
+Thanks for playing.....
